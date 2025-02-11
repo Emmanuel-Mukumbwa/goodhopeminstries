@@ -119,7 +119,7 @@ function HomePage() {
       <div className="col-md-6">
         <div className="video-container">
           <iframe
-            width="400"
+            width="300"
             height="250"
             src="https://www.youtube.com/embed/ty-MTbBolVs?vq=hd1080"
             title="Founder’s Vision"
@@ -165,7 +165,7 @@ function HomePage() {
       <div className="col-md-6 order-md-1">
         <div className="video-container">
           <iframe
-            width="400"
+            width="300"
             height="250"
             src="https://www.youtube.com/embed/NttR4Hy6sWE?vq=hd1080"
             title="Activities Video"

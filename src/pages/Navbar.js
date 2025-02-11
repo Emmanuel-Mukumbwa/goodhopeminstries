@@ -13,8 +13,14 @@ function Navbar({ activeTab, setActiveTab }) {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: '#2A5C82' }}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
       <div className="container">
+        {/* Brand / Logo */}
+        <Link className="navbar-brand" to="/">
+          GoodHopeMinistries<span style={{ color: "#ff6347" }}></span>
+        </Link>
+
+        {/* Toggle button for mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -23,11 +29,19 @@ function Navbar({ activeTab, setActiveTab }) {
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => {
+            const navCollapse = document.getElementById('navbarNav');
+            if (navCollapse) {
+              navCollapse.classList.toggle('show');
+            }
+          }}
         >
-          <span className="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon"></span>
         </button>
+
+        {/* Navbar Items */}
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav me-auto">
             {['home', 'about', 'mission', 'activities', 'gallery', 'contact'].map((tab) => (
               <li className="nav-item" key={tab}>
                 <Link
@@ -41,6 +55,7 @@ function Navbar({ activeTab, setActiveTab }) {
               </li>
             ))}
           </ul>
+
         </div>
       </div>
     </nav>
