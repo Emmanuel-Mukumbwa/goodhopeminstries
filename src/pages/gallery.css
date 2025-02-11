@@ -1,0 +1,93 @@
+/* Ensures the caption overlay is always visible */
+.caption-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Modal Styling */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.custom-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+/* On small devices: stack images vertically */
+@media (max-width: 576px) {
+  .slide-content {
+    flex-direction: column;
+  }
+  .gallery-item {
+    width: 100%;
+  }
+}
+
+/* Custom Modal Overlay */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+/* Custom Modal Content */
+.custom-modal-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Close Button (X Icon) */
+.custom-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Styling for the Modal Image */
+.modal-image {
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsive layout: stack images vertically on small devices */
+@media (max-width: 576px) {
+  .slide-content {
+    flex-direction: column;
+  }
+  .gallery-item {
+    width: 100%;
+  }
+}

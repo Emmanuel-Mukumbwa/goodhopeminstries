@@ -1,0 +1,157 @@
+/* Global Styles */
+.HomePage {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #2A5C82; /* Primary (trust) color */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  .navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-links li {
+    margin: 0 20px;
+  }
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .nav-links a:hover {
+    color: #ccc;
+  }
+  
+  /* Header / Hero Section */
+  .header {
+    background-image: url('header-image.jpg'); /* Ensure this image is available in your public folder or assets */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  
+  /* Header Overlay Container (centers all header content) */
+  .header-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Header Logo: now inside the overlay container and centered */
+  .header-logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 20px auto;  /* Center and add spacing below the logo */
+    border-radius: 0; /* Removes rounded corners */
+  }
+  
+  /* Overlay Text on Hero Image */
+  .header-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .header-overlay p {
+    font-size: 1.25rem;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 5rem 1rem;
+    text-align: center;
+  }
+  .about-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #2A5C82;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  .footer-links a:hover {
+    color: #ccc;
+  }
+  .footer-contact {
+    margin-top: 20px;
+  }
+  .footer-social {
+    margin-top: 20px;
+  }
+  .footer-social a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .footer-social a:hover {
+    color: #ccc;
+  }
+  .footer .copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  /* General list styling for Mission and Activities */
+.mission-list li,
+.activities-list li {
+  position: relative;
+  padding-left: 2rem; /* space for the icon */
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Use a check mark as a bullet icon.
+   If you have Bootstrap Icons or Font Awesome, you could replace the content below with an icon element.
+   Here we use the Unicode check mark (✓) */
+.mission-list li::before,
+.activities-list li::before {
+  content: "\2713"; /* Unicode check mark */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #e8c547; /* a gold/yellow color that fits the gradient */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Optional: Hover effects for a little interactivity */
+.mission-list li:hover,
+.activities-list li:hover {
+  color: #333;
+  cursor: default;
+}
