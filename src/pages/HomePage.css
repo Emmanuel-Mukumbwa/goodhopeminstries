@@ -36,52 +36,64 @@
   }
   
   /* Header / Hero Section */
-  .header {
-    background-image: url('header-image.jpg'); /* Ensure this image is available in your public folder or assets */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-  }
-  
-  /* Header Overlay Container (centers all header content) */
-  .header-overlay {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 20px 30px;
-    border-radius: 5px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  /* Header Logo: now inside the overlay container and centered */
-  .header-logo {
-    width: 120px;
-    display: block;
-    margin: 0 auto 20px auto;  /* Center and add spacing below the logo */
-    border-radius: 0; /* Removes rounded corners */
-  }
-  
-  /* Overlay Text on Hero Image */
-  .header-overlay h1 {
+.header {
+  background-image: url('header-image.jpg'); /* Ensure this image is available */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+/* Overlay for better readability */
+.header-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.header-logo {
+  width: 140px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.header-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-title {
     font-size: 2.5rem;
-    margin-bottom: 10px;
   }
-  .header-overlay p {
-    font-size: 1.25rem;
+  .header-subtitle {
+    font-size: 1.2rem;
   }
-  
-  /* About Section */
-  .about-section {
-    padding: 5rem 1rem;
-    text-align: center;
+  .header-overlay {
+    max-width: 90%;
+    padding: 20px;
   }
-  .about-section h2 {
-    margin-bottom: 10px;
-  }
+}
   
   /* Footer Section */
   .footer {

@@ -83,19 +83,14 @@ function HomePage() {
             {/* Navigation Bar */}
             <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {/* Header / Hero Section */}
-      <header id="home" className="header" ref={heroRef}>
-        {/* Overlay container that holds both the logo and the text */}
-        <div className="header-overlay">
-          <img
-            src={goodhopelogo}
-            alt="GoodMinistries Logo"
-            className="header-logo"
-          />
-          <h1>GOOD HOPE MINISTRIES</h1>
-          <p>Malawi, Africa</p>
-        </div>
-      </header>
+            <header id="home" className="header" ref={heroRef}>
+              {/* Overlay for better readability */}
+              <div className="header-overlay">
+                <img src={goodhopelogo} alt="Good Hope Ministries Logo" className="header-logo" />
+                <h1 className="header-title">GOOD HOPE MINISTRIES</h1>
+                <p className="header-subtitle">Malawi, Africa</p>
+              </div>
+            </header>
 
       {/* Mission Section */}
       <section
@@ -310,7 +305,7 @@ function HomePage() {
       <div className="col-md-4">
         <h5 className="mb-3" style={{ fontWeight: 600, fontSize: '1.1rem' }}>Quick Links</h5>
         <ul className="list-unstyled">
-          {['home', 'about', 'mission', 'activities', 'gallery', 'contact'].map((tab, index) => (
+          {['home', 'about', 'bible study groups', 'testimonies', 'prisonn ministry', 'sewing school'].map((tab, index) => (
             <li key={index} className="mb-2">
               <Link
                 to={`#${tab}`}
