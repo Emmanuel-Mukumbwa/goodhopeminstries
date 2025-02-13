@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../pages/Navbar';
+import Footer from '../pages/Footer';
 import './TestimoniesPage.css';
 
 function TestimoniesPage() {
@@ -7,6 +8,7 @@ function TestimoniesPage() {
     <div className="TestimoniesPage">
       <Navbar />
       <div className="container my-5">
+      <h3>Testimonies</h3>
         {/* Section 1 - Children */}
         <section className="testimony-section my-5">
           <div className="row align-items-center">
@@ -132,7 +134,10 @@ function TestimoniesPage() {
             </div>
           </div>
         </section>
+
       </div>
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }

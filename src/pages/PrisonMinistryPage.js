@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../pages/Navbar';
+import Footer from '../pages/Footer';
 import './PrisonMinistryPage.css';
 
 function PrisonMinistryPage() {
@@ -29,7 +30,7 @@ function PrisonMinistryPage() {
             {/* First row: 4 images */}
             <div className="col-md-3 col-sm-6 image-item">
               <img src="/mzprison.jpg" alt="teaching 900men at mzuzu prison" className="img-fluid prison-img" />
-              <p className="caption">teaching 900men at mzuzu prison</p>
+              <p className="caption">teaching 900 men at mzuzu prison</p>
             </div>
             <div className="col-md-3 col-sm-6 image-item">
               <img src="/leading.jpg" alt="leading a bible study group in rumphi" className="img-fluid prison-img" />
@@ -114,7 +115,11 @@ function PrisonMinistryPage() {
             </div>
           </div>
         </section>
+
+     
       </div>
+         {/* Footer Section */}
+         <Footer />
     </div>
   );
 }

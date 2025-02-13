@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from '../pages/Navbar'; // Adjust the path if needed
+import Navbar from '../pages/Navbar';
+import Footer from '../pages/Footer'
 import './BibleStudyGroupsPage.css';
 
 function BibleStudyGroupsPage() {
@@ -70,6 +71,9 @@ function BibleStudyGroupsPage() {
           </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }

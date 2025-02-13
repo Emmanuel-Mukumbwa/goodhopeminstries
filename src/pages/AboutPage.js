@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../pages/Navbar'; // Adjust the path if needed
+import Navbar from '../pages/Navbar';
+import Footer from '../pages/Footer';
 import './AboutPage.css';
 
 function AboutPage() {
@@ -89,7 +90,8 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Optional: Add Footer here if desired */}
+        {/* Footer Section */}
+        <Footer />
     </div>
   );
 }
