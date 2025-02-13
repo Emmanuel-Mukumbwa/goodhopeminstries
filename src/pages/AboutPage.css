@@ -1,0 +1,55 @@
+/* AboutPage.css */
+
+.AboutPage {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Main team image styling */
+  .about-main-image {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .team-main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Sub images styling */
+  .about-sub-images {
+    margin-top: 20px;
+  }
+  
+  .about-sub-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Founding details styling */
+  .about-details h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .founding-details ul {
+    list-style: disc inside;
+    padding-left: 20px;
+  }
+  
+  .founding-details li {
+    margin-bottom: 10px;
+  }
+  
+  /* Detailed description styling */
+  .detailed-description h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .detailed-description p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  

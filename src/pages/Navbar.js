@@ -42,10 +42,19 @@ function Navbar({ activeTab, setActiveTab }) {
         {/* Navbar Items */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
-            {['home', 'about', 'bible study groups', 'testimonies', 'prisonn ministry', 'sewing school'].map((tab) => (
+            {['home', 'about', 'bible study groups', 'testimonies', 'prison ministry', 'sewing school'].map((tab) => (
               <li className="nav-item" key={tab}>
                 <Link
-                  to={`#${tab}`}
+                  // Use custom routes for certain tabs; hash links for the rest
+                  to={
+                    tab === 'about'
+                      ? '/about'
+                      : tab === 'bible study groups'
+                      ? '/biblestudygroups'
+                      : tab === 'testimonies'
+                      ? '/testimonies'
+                      : `#${tab}`
+                  }
                   className={`nav-link ${activeTab === tab ? 'active' : ''}`}
                   aria-label={tab.charAt(0).toUpperCase() + tab.slice(1)}
                   onClick={() => handleNavItemClick(tab)}
@@ -55,7 +64,6 @@ function Navbar({ activeTab, setActiveTab }) {
               </li>
             ))}
           </ul>
-
         </div>
       </div>
     </nav>

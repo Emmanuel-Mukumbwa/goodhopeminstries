@@ -137,7 +137,6 @@ function HomePage() {
 >
   <div className="container">
     <div className="row align-items-center">
-    <h2 className="mb-4">TEACHING DEVELOPMENT PROGRAM</h2>
       {/* Reverse column order on desktop */}
       <div className="col-md-6 order-md-2">
         <h2>Showing God's Love</h2>
@@ -182,6 +181,8 @@ function HomePage() {
         style={{ background: 'linear-gradient(135deg, #f9f9f9, #e8c54720)' }}
       >
         <div className="container">
+        <h2 className="mb-4">TEACHING DEVELOPMENT PROGRAM</h2>
+
           <div className="row align-items-center">
             {/* TThe Role of a Woman, God's Way */}
             <div className="col-md-6">
@@ -305,7 +306,7 @@ function HomePage() {
       <div className="col-md-4">
         <h5 className="mb-3" style={{ fontWeight: 600, fontSize: '1.1rem' }}>Quick Links</h5>
         <ul className="list-unstyled">
-          {['home', 'about', 'bible study groups', 'testimonies', 'prisonn ministry', 'sewing school'].map((tab, index) => (
+          {['home', 'about', 'bible study groups', 'testimonies', 'prison ministry', 'sewing school'].map((tab, index) => (
             <li key={index} className="mb-2">
               <Link
                 to={`#${tab}`}
