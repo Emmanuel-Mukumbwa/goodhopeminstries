@@ -7,6 +7,8 @@ import BibleStudyGroupsPage from './pages/BibleStudyGroupsPage';
 import TestimoniesPage from './pages/TestimoniesPage';
 import './App.css';
 import PrisonMinistryPage from './pages/PrisonMinistryPage';
+import SewingSchoolPage from './pages/SewingSchoolPage';
+import StoriesPage from './pages/StoriesPage';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/biblestudygroups" element={<BibleStudyGroupsPage />} />
           <Route path="/testimonies" element={<TestimoniesPage />} />
           <Route path="/prisonministry" element={<PrisonMinistryPage />} />
+          <Route path="/sewingschool" element={<SewingSchoolPage />} />
+          <Route path="/stories" element={<StoriesPage />} />
         </Routes>
       </div>
     </Router>

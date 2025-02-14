@@ -1,0 +1,38 @@
+/* StoriesPage.css */
+
+.StoriesPage {
+    font-family: Arial, sans-serif;
+    padding-top: 20px;
+  }
+  
+  .story-section {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 2rem;
+  }
+  
+  .story-section h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .story-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .story-img {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .story-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  

@@ -1,55 +1,138 @@
 /* AboutPage.css */
 
 .AboutPage {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout for About Images: two columns on larger screens, column layout on small screens */
+.about-images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Left Column: Main Image */
+.main-image {
+  flex: 1 1 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.team-main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Right Column: Sub Images */
+.sub-images {
+  flex: 1 1 50%;
+  padding: 10px;
+}
+
+/* Grid of 3 images: two on top, one below spanning full width */
+.sub-images-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+}
+
+.sub-image-item {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.about-sub-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.about-sub-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Make the third image span two columns */
+.sub-images-grid > .sub-image-item:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* Founding details styling */
+.about-details h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.founding-details ul {
+  list-style: disc inside;
+  padding-left: 20px;
+}
+
+.founding-details li {
+  margin-bottom: 10px;
+}
+
+/* Detailed description styling */
+.detailed-description h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.detailed-description p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+/* Responsive: on small screens, stack columns with main image on top */
+@media (max-width: 768px) {
+  .about-images-wrapper {
+    flex-direction: column;
   }
-  
-  /* Main team image styling */
-  .about-main-image {
-    width: 100%;
-    overflow: hidden;
+  .main-image,
+  .sub-images {
+    flex: 1 1 100%;
   }
-  
-  .team-main-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  /* Sub images styling */
-  .about-sub-images {
-    margin-top: 20px;
-  }
-  
-  .about-sub-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  /* Founding details styling */
-  .about-details h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .founding-details ul {
-    list-style: disc inside;
-    padding-left: 20px;
-  }
-  
-  .founding-details li {
-    margin-bottom: 10px;
-  }
-  
-  /* Detailed description styling */
-  .detailed-description h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-  
-  .detailed-description p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-  }
-  
+}

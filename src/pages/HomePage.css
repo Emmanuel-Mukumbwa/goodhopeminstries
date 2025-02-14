@@ -1,41 +1,58 @@
 /* Global Styles */
 .HomePage {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Refined Container: improved left/right padding */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Responsive adjustments for container on mobile */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  
-  /* Navbar */
-  .navbar {
-    background-color: #2A5C82; /* Primary (trust) color */
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
-  .navbar .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  .nav-links li {
-    margin: 0 20px;
-  }
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  .nav-links a:hover {
-    color: #ccc;
-  }
-  
-  /* Header / Hero Section */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2A5C82; /* Primary (trust) color */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.nav-links li {
+  margin: 0 20px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #ccc;
+}
+
+/* Header / Hero Section */
 .header {
   background-image: url('header-image.jpg'); /* Ensure this image is available */
   background-size: cover;
@@ -56,6 +73,20 @@
   border-radius: 10px;
   max-width: 80%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments for header overlay */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2.5rem;
+  }
+  .header-subtitle {
+    font-size: 1.2rem;
+  }
+  .header-overlay {
+    max-width: 90%;
+    padding: 20px 15px;
+  }
 }
 
 /* Logo */
@@ -81,63 +112,49 @@
   opacity: 0.9;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .header-title {
-    font-size: 2.5rem;
-  }
-  .header-subtitle {
-    font-size: 1.2rem;
-  }
-  .header-overlay {
-    max-width: 90%;
-    padding: 20px;
-  }
+/* Footer Section */
+.footer {
+  background-color: #2A5C82;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
 }
-  
-  /* Footer Section */
-  .footer {
-    background-color: #2A5C82;
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-  .footer-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
-  .footer-links a:hover {
-    color: #ccc;
-  }
-  .footer-contact {
-    margin-top: 20px;
-  }
-  .footer-social {
-    margin-top: 20px;
-  }
-  .footer-social a {
-    margin-right: 10px;
-    color: #fff;
-    text-decoration: none;
-  }
-  .footer-social a:hover {
-    color: #ccc;
-  }
-  .footer .copyright {
-    margin-top: 20px;
-    font-size: 0.9rem;
-  }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: #ccc;
+}
+.footer-contact {
+  margin-top: 20px;
+}
+.footer-social {
+  margin-top: 20px;
+}
+.footer-social a {
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.footer-social a:hover {
+  color: #ccc;
+}
+.footer .copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
 
-  /* General list styling for Mission and Activities */
+/* General list styling for Mission and Activities */
 .mission-list li,
 .activities-list li {
   position: relative;
@@ -147,21 +164,19 @@
   line-height: 1.5;
 }
 
-/* Use a check mark as a bullet icon.
-   If you have Bootstrap Icons or Font Awesome, you could replace the content below with an icon element.
-   Here we use the Unicode check mark (✓) */
+/* Check mark as bullet icon */
 .mission-list li::before,
 .activities-list li::before {
   content: "\2713"; /* Unicode check mark */
   position: absolute;
   left: 0;
   top: 0;
-  color: #e8c547; /* a gold/yellow color that fits the gradient */
+  color: #e8c547; /* gold/yellow color */
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-/* Optional: Hover effects for a little interactivity */
+/* Hover effects for list items */
 .mission-list li:hover,
 .activities-list li:hover {
   color: #333;

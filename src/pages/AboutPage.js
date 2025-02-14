@@ -1,48 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../pages/Navbar';
 import Footer from '../pages/Footer';
 import './AboutPage.css';
 
 function AboutPage() {
+  const [modalImage, setModalImage] = useState(null);
+
+  const openModal = (imageSrc) => {
+    setModalImage(imageSrc);
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
   return (
     <div className="AboutPage">
       {/* Navigation */}
       <Navbar />
-
-      {/* Main Team Image */}
-      <section className="about-main-image">
-        <img src="/team.jpg" alt="Our Team" className="team-main-image" />
-      </section>
-
-      {/* Sub Images Section */}
-      <section className="about-sub-images container">
-        <div className="row">
-          <div className="col-md-4 col-12">
-            <img src="/teaching.jpg" alt="Teaching" className="about-sub-image" />
+      {/* Images Section */}
+      <section className="about-images container my-5">
+      <header className="mb-5 text-center">
+          <h2>ABOUT US</h2>
+        </header>
+        <div className="about-images-wrapper">
+          {/* Left Column: Main Team Image (clickable) */}
+          <div className="main-image" onClick={() => openModal("/team.jpg")}>
+            <img src="/team.jpg" alt="Our Team" className="team-main-image" />
           </div>
-          <div className="col-md-4 col-12">
-            <img src="/office.jpg" alt="Office" className="about-sub-image" />
-          </div>
-          <div className="col-md-4 col-12">
-            <img src="/cars.jpg" alt="Cars" className="about-sub-image" />
+
+          {/* Right Column: Grid of Sub Images */}
+          <div className="sub-images">
+            <div className="sub-images-grid">
+              <div className="sub-image-item" onClick={() => openModal("/teaching.jpg")}>
+                <img src="/teaching.jpg" alt="Teaching" className="about-sub-image" />
+              </div>
+              <div className="sub-image-item" onClick={() => openModal("/office.jpg")}>
+                <img src="/office.jpg" alt="Office" className="about-sub-image" />
+              </div>
+              <div className="sub-image-item" onClick={() => openModal("/cars.jpg")}>
+                <img src="/cars.jpg" alt="Cars" className="about-sub-image" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Founding Details Section */}
+      {/* Founding Details & Description */}
       <section className="about-details container my-5">
         <div className="founding-details mb-4">
           <h2>Good Hope Ministries</h2>
           <ul>
-            <li>Founded in 2001 by Joe & Anna Ebert</li>
+            <li>Founded in 2001 by Joe &amp; Anna Ebert</li>
             <li>Works with the Tumbuka people in every village in northern Malawi</li>
             <li>Home base is in Luwinga, Mzuzu</li>
             <li>Office in Canada is located in London, ON, Canada</li>
           </ul>
         </div>
 
-        {/* Longer Descriptive Passage */}
         <div className="detailed-description">
           <p>
             Good Hope Ministries is a holistic ministry committed to improving the lives of the Tumbuka people in northern Malawi through sharing God's word and showing God's love in many practical ways so they will trust us and receive the message we bring. In doing so, that God can be glorified through it all.
@@ -90,8 +106,18 @@ function AboutPage() {
         </div>
       </section>
 
-        {/* Footer Section */}
-        <Footer />
+      {/* Footer */}
+      <Footer />
+
+      {/* Modal for Expanded Image */}
+      {modalImage && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content">
+            <img src={modalImage} alt="Expanded view" />
+            <button className="modal-close" onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,8 +1,21 @@
-// src/pages/Footer.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  // Array of quick links that will use the same route logic as Navbar
+  const quickLinks = ['home', 'about', 'bible study groups', 'testimonies', 'prison ministry', 'sewing school', 'stories'];
+
+  const getRouteForTab = (tab) => {
+    if (tab === 'home') return '/';
+    if (tab === 'about') return '/about';
+    if (tab === 'bible study groups') return '/biblestudygroups';
+    if (tab === 'testimonies') return '/testimonies';
+    if (tab === 'prison ministry') return '/prisonministry';
+    if (tab === 'sewing school') return '/sewingschool';
+    if (tab === 'stories') return '/stories';
+    return `#${tab}`;
+  };
+
   return (
     <footer className="footer" style={{ backgroundColor: '#000000', color: '#f5f5f5', paddingTop: '2rem' }}>
       <div className="container">
@@ -11,10 +24,10 @@ const Footer = () => {
           <div className="col-md-4">
             <h5 className="mb-3" style={{ fontWeight: 600, fontSize: '1.1rem' }}>Quick Links</h5>
             <ul className="list-unstyled">
-              {['home', 'about', 'bible study groups', 'testimonies', 'prison ministry', 'sewing school'].map((tab, index) => (
+              {quickLinks.map((tab, index) => (
                 <li key={index} className="mb-2">
                   <Link
-                    to={`#${tab}`}
+                    to={getRouteForTab(tab)}
                     className="footer-link"
                     style={{
                       color: '#e0e0e0',
@@ -90,7 +103,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-top mt-4 pt-4" style={{ borderColor: ' rgba(255,255,255,0.1)' }}>
+        <div className="border-top mt-4 pt-4" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
           <div className="text-center">
             <p className="mb-0" style={{ fontSize: '0.9rem', color: '#b0b0b0' }}>
               © 2025 Good Hope Ministries. All rights reserved.
